@@ -1,7 +1,7 @@
 /// Subscription entity
 library;
 
-import '../../../core/config/app_config.dart';
+import '../../../../core/config/app_config.dart';
 
 /// Represents a user's subscription
 class Subscription {

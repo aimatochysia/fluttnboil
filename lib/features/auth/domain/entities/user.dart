@@ -1,7 +1,7 @@
 /// User entity representing an authenticated user
 library;
 
-import '../../core/config/app_config.dart';
+import '../../../../core/config/app_config.dart';
 
 /// User model representing the authenticated user
 class User {

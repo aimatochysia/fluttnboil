@@ -252,8 +252,10 @@ class AuthRepositoryImpl implements AuthRepository {
 
   @override
   Future<void> clearStoredTokens() async {
-    await _storage.delete(key: StorageKeys.accessToken);
-    await _storage.delete(key: StorageKeys.userId);
-    await _storage.delete(key: StorageKeys.userEmail);
+    await Future.wait([
+      _storage.delete(key: StorageKeys.accessToken),
+      _storage.delete(key: StorageKeys.userId),
+      _storage.delete(key: StorageKeys.userEmail),
+    ]);
   }
 }
